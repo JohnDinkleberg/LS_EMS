@@ -44,7 +44,7 @@ def rank_questions(score):
             else:
                 question = -1
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        g_score = float(input('Points earned (1 - 10): '))
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -76,7 +76,7 @@ def general_questions(score):
             else:
                 question = -1
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        g_score = float(input('Points earned (1 - 10): '))
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -103,7 +103,7 @@ def sop_questions(score):
             else:
                 question = -1
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        g_score = float(input('Points earned (1 - 10): '))
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -133,7 +133,7 @@ def role_play_questions(score):
             else:
                 question = -1
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        g_score = float(input('Points earned (1 - 10): '))
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -156,7 +156,7 @@ def equipment_questions(score):
             else:
                 question = -1
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        g_score = float(input('Points earned (1 - 10): '))
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -188,7 +188,8 @@ def fail_file(conductor, name, date, score):
 
 
 def pass_file(conductor, name, date, time_zone, call_sign, score):
-    file = open(f'{name}.txt', 'w')
+    fname = name.replace(' ', '_')
+    file = open(f'{fname}.txt', 'w')
     data_file = f'''
     Name: {name}
     Date Of Hire: {date}
