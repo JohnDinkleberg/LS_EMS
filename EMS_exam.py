@@ -59,12 +59,16 @@ def rank_questions(score):
                 except:
                     e = 0
         print(question_dict[question])
+<<<<<<< HEAD
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
                 e1 += 1
             except:
                 e1 = 0
+=======
+        g_score = float(input('Points earned (1 - 10): '))
+>>>>>>> master
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -104,12 +108,16 @@ def general_questions(score):
                 except:
                     e = 0
         print(question_dict[question])
+<<<<<<< HEAD
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
                 e1 += 1
             except:
                 e1 = 0
+=======
+        g_score = float(input('Points earned (1 - 10): '))
+>>>>>>> master
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -144,12 +152,16 @@ def sop_questions(score):
                 except:
                     e = 0
         print(question_dict[question])
+<<<<<<< HEAD
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
                 e1 += 1
             except:
                 e1 = 0
+=======
+        g_score = float(input('Points earned (1 - 10): '))
+>>>>>>> master
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -187,12 +199,16 @@ def role_play_questions(score):
                 except:
                     e = 0
         print(question_dict[question])
+<<<<<<< HEAD
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
                 e1 += 1
             except:
                 e1 = 0
+=======
+        g_score = float(input('Points earned (1 - 10): '))
+>>>>>>> master
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -223,12 +239,16 @@ def equipment_questions(score):
                 except:
                     e = 0
         print(question_dict[question])
+<<<<<<< HEAD
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
                 e1 += 1
             except:
                 e1 = 0
+=======
+        g_score = float(input('Points earned (1 - 10): '))
+>>>>>>> master
         score += g_score
         asked_questions.append(question)
         question = -1
