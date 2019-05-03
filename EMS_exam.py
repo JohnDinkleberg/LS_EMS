@@ -69,6 +69,7 @@ def rank_questions(score):
         asked_questions.append(question)
         question = -1
         questions_asked += 1
+        print('')
     score = get_total_score(score)
     return score
 
@@ -81,7 +82,7 @@ def general_questions(score):
                      2: "How do you decide who is treated first? ",
                      3: "Can you commit crime or partake in illegal " \
                         "activities while on duty? ",
-                     4: "Are you allowed to go off duty as a Probationary" \
+                     4: "Are you allowed to go off duty as a Probationary " \
                         "EMT? ",
                      5: "Is there any EMS regulation regarding the clothing " \
                         "you wear? ",
@@ -114,6 +115,7 @@ def general_questions(score):
         asked_questions.append(question)
         question = -1
         questions_asked += 1
+        print('')
     score = get_total_score(score)
     return score
 
@@ -154,6 +156,7 @@ def sop_questions(score):
         asked_questions.append(question)
         question = -1
         questions_asked += 1
+        print('')
     score = get_total_score(score)
     return score
 
@@ -166,8 +169,8 @@ def role_play_questions(score):
                         "Vinewood.  My wrist really hurts and my car is " \
                         "broken - 911 Dispatch",
                      2: "The patient was involved in a gunfight and is " \
-                        "riddled with injuries. They can barely speak or move" \
-                        "and appears to be in critical condition - police guy",
+                        "riddled with injuries. They can barely speak or move " \
+                        "and appears to be in critical condition - police guy ",
                      3: "You revive someone after a gunfight has taken " \
                         "place, but the patient runs away from you! what do "\
                         "you do?"}
@@ -197,6 +200,7 @@ def role_play_questions(score):
         asked_questions.append(question)
         question = -1
         questions_asked += 1
+        print('')
     score = get_total_score(score)
     return score
 
@@ -233,6 +237,7 @@ def equipment_questions(score):
         asked_questions.append(question)
         question = -1
         questions_asked += 1
+        print('')
     score = get_total_score(score)
     return score
 
@@ -292,7 +297,6 @@ def main():
     else:
         fail_file(c, n, doh, equipment_score)
         print('The interviewee has failed')
-    # TODO: Git hub posting
     return score
 
 
