@@ -288,8 +288,10 @@ def main():
     exam = pass_or_fail(equipment_score)
     if exam is True:
         pass_file(c, n, doh, tz, call_sign, equipment_score)
+        print('The interviewee has passed')
     else:
         fail_file(c, n, doh, equipment_score)
+        print('The interviewee has failed')
     # TODO: Git hub posting
     return score
 
