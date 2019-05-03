@@ -62,7 +62,7 @@ def rank_questions(score):
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
-                e1 += 1
+                e1 = 1
             except ValueError:
                 e1 = 0
         score += g_score
@@ -94,7 +94,7 @@ def general_questions(score):
         while question not in question_dict:
             while e == 0:
                 try:
-                    question = int(input("Pick a question (1 - 5): "))
+                    question = int(input("Pick a question (1 - 6): "))
                     if question not in asked_questions:
                         question = question
                         e = 1
@@ -107,7 +107,7 @@ def general_questions(score):
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
-                e1 += 1
+                e1 = 1
             except ValueError:
                 e1 = 0
         score += g_score
@@ -134,7 +134,7 @@ def sop_questions(score):
         while question not in question_dict:
             while e == 0:
                 try:
-                    question = int(input("Pick a question (1 - 5): "))
+                    question = int(input("Pick a question (1 - 4): "))
                     if question not in asked_questions:
                         question = question
                         e = 1
@@ -147,7 +147,7 @@ def sop_questions(score):
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
-                e1 += 1
+                e1 = 1
             except ValueError:
                 e1 = 0
         score += g_score
@@ -177,7 +177,7 @@ def role_play_questions(score):
         while question not in question_dict:
             while e == 0:
                 try:
-                    question = int(input("Pick a question (1 - 5): "))
+                    question = int(input("Pick a question (1 - 3): "))
                     if question not in asked_questions:
                         question = question
                         e = 1
@@ -190,7 +190,7 @@ def role_play_questions(score):
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
-                e1 += 1
+                e1 = 1
             except ValueError:
                 e1 = 0
         score += g_score
@@ -213,7 +213,7 @@ def equipment_questions(score):
         while question not in question_dict:
             while e == 0:
                 try:
-                    question = int(input("Pick a question (1 - 5): "))
+                    question = int(input("Pick a question (1 - 2): "))
                     if question not in asked_questions:
                         question = question
                         e = 1
@@ -226,7 +226,7 @@ def equipment_questions(score):
         while e1 == 0:
             try:
                 g_score = float(input('Points earned (1 - 10): '))
-                e1 += 1
+                e1 = 1
             except:
                 e1 = 0
         score += g_score
