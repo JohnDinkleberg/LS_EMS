@@ -22,8 +22,14 @@ def intro_questions():
 
 def Chain_of_command(score):
     print("What is the chain of command starting at the lowest rank?")
-    c_score = float(input("Points earned (1 - 10): "))
-    c_score = get_total_score(c_score)
+    e = 0
+    while e == 0:
+        try:
+            c_score = float(input("Points earned (1 - 10): "))
+            c_score = get_total_score(c_score)
+            e = 1
+        except ValueError:
+            e = 0
     return c_score
 
 
@@ -31,20 +37,34 @@ def rank_questions(score):
     asked_questions = []
     questions_asked = 0
     question = 0
+    e = 0
     question_dict = {1: "Who is the current Director of the ERD? ",
                      2: "Who is the current Assistant Director of the ERD? ",
                      3: "Who is the current ERD Captain? ",
                      4: "Who is the current Fire and Rescue Captain? ",
                      5: "Why do we have a chain of command? "}
     while questions_asked < 5:
+        e = 0
+        e1 = 0
         while question not in question_dict:
-            question = int(input("Pick a question (1 - 5): "))
-            if question not in asked_questions:
-                question = question
-            else:
-                question = -1
+            while e == 0:
+                try:
+                    question = int(input("Pick a question (1 - 5): "))
+                    if question not in asked_questions:
+                        question = question
+                        e = 1
+                    else:
+                        question = -1
+                        e = 1
+                except:
+                    e = 0
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        while e1 == 0:
+            try:
+                g_score = float(input('Points earned (1 - 10): '))
+                e1 += 1
+            except:
+                e1 = 0
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -69,14 +89,27 @@ def general_questions(score):
                         "neutrality preventing you from being able to " \
                         "report this crime? "}
     while questions_asked < 6:
+        e = 0
+        e1 = 0
         while question not in question_dict:
-            question = int(input("Pick a question (1 - 6): "))
-            if question not in asked_questions:
-                question = question
-            else:
-                question = -1
+            while e == 0:
+                try:
+                    question = int(input("Pick a question (1 - 5): "))
+                    if question not in asked_questions:
+                        question = question
+                        e = 1
+                    else:
+                        question = -1
+                        e = 1
+                except:
+                    e = 0
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        while e1 == 0:
+            try:
+                g_score = float(input('Points earned (1 - 10): '))
+                e1 += 1
+            except:
+                e1 = 0
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -96,14 +129,27 @@ def sop_questions(score):
                      3: "Who is exempt from EMS Custody? ",
                      4: "As a probie EMT can you have a ride along? "}
     while questions_asked < 4:
+        e = 0
+        e1 = 0
         while question not in question_dict:
-            question = int(input("Pick a question (1 - 4): "))
-            if question not in asked_questions:
-                question = question
-            else:
-                question = -1
+            while e == 0:
+                try:
+                    question = int(input("Pick a question (1 - 5): "))
+                    if question not in asked_questions:
+                        question = question
+                        e = 1
+                    else:
+                        question = -1
+                        e = 1
+                except:
+                    e = 0
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        while e1 == 0:
+            try:
+                g_score = float(input('Points earned (1 - 10): '))
+                e1 += 1
+            except:
+                e1 = 0
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -126,14 +172,27 @@ def role_play_questions(score):
                         "place, but the patient runs away from you! what do "\
                         "you do?"}
     while questions_asked < 3:
+        e = 0
+        e1 = 0
         while question not in question_dict:
-            question = int(input("Pick a question (1 - 3): "))
-            if question not in asked_questions:
-                question = question
-            else:
-                question = -1
+            while e == 0:
+                try:
+                    question = int(input("Pick a question (1 - 5): "))
+                    if question not in asked_questions:
+                        question = question
+                        e = 1
+                    else:
+                        question = -1
+                        e = 1
+                except:
+                    e = 0
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        while e1 == 0:
+            try:
+                g_score = float(input('Points earned (1 - 10): '))
+                e1 += 1
+            except:
+                e1 = 0
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -149,14 +208,27 @@ def equipment_questions(score):
     question_dict = {1: "Is it okay for civs to call 911 to ask for help?",
                      2: "What are the speed limits when in code 1?" }
     while questions_asked < 2:
+        e = 0
+        e1 = 0
         while question not in question_dict:
-            question = int(input("Pick a question (1 - 3): "))
-            if question not in asked_questions:
-                question = question
-            else:
-                question = -1
+            while e == 0:
+                try:
+                    question = int(input("Pick a question (1 - 5): "))
+                    if question not in asked_questions:
+                        question = question
+                        e = 1
+                    else:
+                        question = -1
+                        e = 1
+                except:
+                    e = 0
         print(question_dict[question])
-        g_score = float(input('Points earned (1 - 10) '))
+        while e1 == 0:
+            try:
+                g_score = float(input('Points earned (1 - 10): '))
+                e1 += 1
+            except:
+                e1 = 0
         score += g_score
         asked_questions.append(question)
         question = -1
@@ -188,7 +260,8 @@ def fail_file(conductor, name, date, score):
 
 
 def pass_file(conductor, name, date, time_zone, call_sign, score):
-    file = open(f'{name}.txt', 'w')
+    fname = name.replace(' ', '_')
+    file = open(f'{fname}.txt', 'w')
     data_file = f'''
     Name: {name}
     Date Of Hire: {date}
